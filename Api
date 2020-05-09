@@ -1,0 +1,21 @@
+package com.example.recipefinderapp.networking
+
+import com.example.recipefinderapp.data.Recipe
+import com.example.recipefinderapp.data.RecipePayload
+import retrofit2.Call
+import retrofit2.http.*
+
+interface Api {
+    @FormUrlEncoded
+    @POST("createuser")
+    fun createuser(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<Recipe>
+
+    @GET("api")
+    fun get(
+        @Query("i")i:String,
+        @Query("q")q:String
+    ):Call<RecipePayload>
+}
