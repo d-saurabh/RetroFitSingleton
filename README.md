@@ -20,3 +20,6 @@ compileOptions {
         jvmTarget = "1.8"
     }
 ```
+
+## References
+- https://app.quicktype.io/ for generating the Data models from Api Json response 
